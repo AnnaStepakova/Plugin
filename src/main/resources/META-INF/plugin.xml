@@ -1,19 +1,29 @@
 <idea-plugin>
     <id>com.github.annastepakova.plugin</id>
-    <name>Plugin</name>
+    <name>FindVariablesPlugin</name>
     <vendor>annastepakova</vendor>
+    <!-- <version>1.0-SNAPSHOT</version> -->
+    <description><![CDATA[
+    Plugin for offering sub-annotation for variables
+    ]]></description>
 
     <!-- Product and plugin compatibility requirements -->
     <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
+    <depends>com.intellij.modules.python</depends>
 
     <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.annastepakova.plugin.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.annastepakova.plugin.services.MyProjectService"/>
+        <intentionAction>
+            <className>com.github.annastepakova.plugin.TypeAnnotationIntention</className>
+            <category>...</category>
+        </intentionAction>
+        <!--<applicationService serviceImplementation="com.github.annastepakova.plugin.services.MyApplicationService"/>
+        <projectService serviceImplementation="com.github.annastepakova.plugin.services.MyProjectService"/>-->
     </extensions>
 
-    <projectListeners>
+    <!--<projectListeners>
         <listener class="com.github.annastepakova.plugin.listeners.MyProjectManagerListener"
                   topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </projectListeners>
+    </projectListeners>-->
+
 </idea-plugin>

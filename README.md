@@ -1,4 +1,21 @@
-# Plugin
+# Add Any type annotation plugin for PyCharm
+
+This plugin allows to add Any type annotation to the variable or function parameter under cursor.
+
+##How to run
+
+This plugin haven't been published yet, so to run it you should type in terminal `./gradlew runIde` from the project root
+(or call the same gradle task from UI if you are using IntelliJ IDEA). After this PyCharm will be launched and to use 
+the functionality of the plugin you should press `Alt + Enter` when cursor is placed 
+before or inside (not after!) a variable name or function parameter. Currently, plugin supports
+only in-line type annotations (e.g. `a: Any = b + c`), so syntactic constructions supporting only out-of-line
+type annotation, such as `for` loop and `with` are not supported.
+
+---
+
+*Further text belongs to original JetBrains plugin template.*
+
+---
 
 ![Build](https://github.com/AnnaStepakova/Plugin/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/PLUGIN_ID.svg)](https://plugins.jetbrains.com/plugin/PLUGIN_ID)
