@@ -2,7 +2,7 @@
 
 This plugin allows to add Any type annotation to the variable or function parameter under cursor.
 
-##How to run
+## How to run
 
 This plugin haven't been published yet, so to run it you should type in terminal `./gradlew runIde` from the project root
 (or call the same gradle task from UI if you are using IntelliJ IDEA). After this PyCharm will be launched and to use 
